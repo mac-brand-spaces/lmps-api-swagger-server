@@ -4,6 +4,7 @@
     "[typescript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
+    "eslint.enable": true,
     "editor.tabSize": 2,
     "editor.indentSize": "tabSize",
     "editor.insertSpaces": true,

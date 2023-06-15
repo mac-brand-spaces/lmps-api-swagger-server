@@ -28,13 +28,13 @@ app.listen(env.SWAGGER_PORT, () => {
 
 function getSwaggerEndpoint(): string {
   // get endpoint
-  var endpoint = env.SWAGGER_ENDPOINT
+  let endpoint = env.SWAGGER_ENDPOINT
   if (!endpoint.endsWith("/")) {
     endpoint += "/"
   }
 
   if (env.SWAGGER_ENDPOINT_TRY_ADD_VERSION) {
-    var version =
+    let version =
       openapi && openapi.info && openapi.info.version
         ? openapi.info.version
         : undefined

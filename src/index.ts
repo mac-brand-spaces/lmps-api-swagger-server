@@ -41,7 +41,6 @@ app.get(swagger_endpoint, (req, res) => {
 })
 
 env.SWAGGER_VERSIONS.forEach((v) => {
-  console.log(`${swagger_endpoint}${v}`)
   app.use(
     `${swagger_endpoint}${v}`,
     swaggerUi.serve,

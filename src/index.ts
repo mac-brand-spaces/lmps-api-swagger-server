@@ -33,7 +33,7 @@ app.get(swagger_endpoint, (req, res) => {
       ${env.SWAGGER_VERSIONS.map(
         (version) =>
           `<li><a href="${swagger_endpoint}${version}">${version}</a></li>`
-      )}
+      ).join("\n")}
     </ul>
   </body>
 </html>

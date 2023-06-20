@@ -33,7 +33,7 @@ app.get(swagger_endpoint, (req, res) => {
       ${env.SWAGGER_VERSIONS.map(
         (version) =>
           `<li><a href="${swagger_endpoint}${version}">${version}</a></li>`
-      )}
+      ).join("\n")}
     </ul>
   </body>
 </html>
@@ -41,7 +41,6 @@ app.get(swagger_endpoint, (req, res) => {
 })
 
 env.SWAGGER_VERSIONS.forEach((v) => {
-  console.log(`${swagger_endpoint}${v}`)
   app.use(
     `${swagger_endpoint}${v}`,
     swaggerUi.serve,

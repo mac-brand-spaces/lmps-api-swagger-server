@@ -11,7 +11,8 @@
     "lint": "eslint --ext .ts src",
     "lint:fix": "eslint --fix --ext .ts src",
     "prettier": "prettier --write \"src/**/*.ts\"",
-    "prettier:check": "prettier --check \"src/**/*.ts\""
+    "prettier:check": "prettier --check \"src/**/*.ts\"",
+    "docker:build": "docker build . -t lmps-api-swagger-server:$npm_package_version --secret id=npmrc,src=$HOME/.npmrc"
   },
   "keywords": [],
   "author": "",

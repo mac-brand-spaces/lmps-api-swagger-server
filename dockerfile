@@ -12,5 +12,5 @@ ENV SWAGGER_PORT=8080
 
 EXPOSE 8080
 
-RUN --mount=type=secret,id=npmrc,target=/root/.npmrc npm ci
+RUN NODE_ENV=production --mount=type=secret,id=npmrc,target=/root/.npmrc npm ci
 CMD ["npm", "start"]
